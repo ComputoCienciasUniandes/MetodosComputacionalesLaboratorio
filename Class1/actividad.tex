@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[intlimits]{amsmath}
+
+\title{UNIX: Comandos y scripts}
+
+\begin{document}
+\maketitle
+
+La actividad de hoy se debe subir al \textrm{sicuplus} hasta las $10:00$am de hoy,
+con el nombre (\texttt{apellidos.sh})\\
+Hacer un script que realice lo siguiente:
+
+\begin{itemize}
+
+\item Obtener el archivo $Pi\_2500000.txt$ de: \\ $https://github.com/forero/ComputationalMethodsData/tree/master/homework/hw\_1$
+(wget)[5 puntos]
+\item  Encontrar los patrones $0$, $00$, $000$, $0000$, $00000$ y $00000$ en:
+$Pi\_2500000.txt$  (grep) [8 puntos]
+\item repetir el punto anterior pero con los patrones $1$, $12$, $123$, $1234$, $12345$ y $123456$ [8 puntos]
+\item Contar el n\'umero de veces que se repiten estos patrones. (wc) [12 puntos]
+\item Guardar el n\'umero de veces que se repiten los patrones en un archivo con el nombre (apellidos.txt), este archivo debe tener 2 filas y 6 columnas. En la primera fila deben ir las repeticiones de 0, 00, 000, 0000, 00000 y 000000 an\'alogamente en la segunda fila las de 1, 12, 123, 1234, 12345, 123456 respectivamente. [17 puntos]
+
+\end{itemize}
+
+\end{document}
