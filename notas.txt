@@ -1,0 +1,14 @@
+Nombre              Ejercicio 1        Ejercicio 2 
+
+Aleman-Espinosa         4.8
+Alvarez-Velasquez       5.0
+Ayala-Granados          5.0
+Calderon-Garcia         4.0
+Cotrino-Sandoval        4.4
+Davila-Diaz             5.0
+Godoy-Landinez          3.0
+Martinez-Gomez          5.0
+Perez-Consuegra          - 
+Prada-Gonzalez          5.0
+Remolina-Gutierrez      5.0
+Romero-Diaz             3.7
