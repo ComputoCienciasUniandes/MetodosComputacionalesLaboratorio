@@ -1,15 +1,15 @@
-Nombre              Ejercicio 1        Ejercicio 2  Clase
-Aleman-Espinosa         4.8   	       		    -0.5
-Alvarez-Velasquez       5.0			    -0.5
-Ayala-Granados          5.0			    0.0
-Calderon-Garcia         4.0			    -0.5
-Cotrino-Sandoval        4.4			 0.0   
-Davila-Diaz             5.0			    -0.5
-Godoy-Landinez          3.0			    +0.5
-Martinez-Gomez          5.0			+0.5
-Perez-Consuegra          - 			0.0
-Prada-Gonzalez          5.0			+0.5
-Remolina-Gutierrez      5.0			+0.5
-Romero-Diaz             3.7			-0.5
-Perez-Ortiz					+0.5	
-Perico-Martinez					0.0
+Nombre              Ejercicio 1        Ejercicio 2    Clase
+Aleman-Espinosa         4.8   	       		4.5          -0.5
+Alvarez-Velasquez       5.0			          4.5          -0.5
+Ayala-Granados          5.0			          4.5           0.0
+Calderon-Garcia         4.0			          4.5          -0.5
+Cotrino-Sandoval        4.4			           -            0.0   
+Davila-Diaz             5.0			           -           -0.5
+Godoy-Landinez          3.0			          4.0          +0.5
+Martinez-Gomez          5.0			          4.5          +0.5
+Perez-Consuegra          - 			          5.0           0.0
+Prada-Gonzalez          5.0			          5.0          +0.5
+Remolina-Gutierrez      5.0			          5.0          +0.5
+Romero-Diaz             3.7			          3.0          -0.5
+Perez-Ortiz					                                   +0.5	
+Perico-Martinez					                                0.0
