@@ -1,0 +1,36 @@
+Nombre,55,5,5,5,5,5,10,10,Nota,Comentarios
+Billy Alejandro Revelo,1,1,1,1,1,1,1,1,100,Muy Bien
+David Jaramillo,1,1,,1,1,,,,70,
+David Alejandro García,1,1,,,1,1,,,70,
+David Esteban Bernal,1,1,1,1,1,1,1,,90,
+Daniel Olaya,1,,,,,,,,55,
+Esteban Rivera,1,1,1,1,,,,,70,
+Elkin Alvis,1,,,,,,,,55,
+Henry Steven Rueda,1,1,1,1,1,,,,75,
+Jesus Alberto Solano,1,1,1,,,,,,65,
+Juan Camilo Farfán,1,,,,,,,,55,No funciona por errores de sintaxis (falta un ;) y porque la semilla no se declara dentro de la función
+Juan Carlos Linares,1,,,,,,,,55,
+Juan David Arango,1,1,,1,1,,,,70,
+Juan Felipe Mendez,1,1,1,1,1,,,,75,
+Juan Sebastian Garzón,1,,,1,1,1,1,,80,Genera un archivo que no está en columnas (falta un \n)
+Lucas Varela,1,1,1,,1,1,1,,85,
+Luis Alberto Pizano,1,1,,1,,,,,65,
+Manuel Eduardo Ariza,1,,,,,,,,55,
+Nataly Castillo,1,,,,,,,,55,No funciona porque falta la semilla
+Nicolás Romero,1,1,1,1,1,1,,,80,
+Rudy Mendez,1,1,1,1,1,,,,75,
+Santiago Cuartas,1,1,,1,1,,,,70,
+Sebastian Rosales,1,1,1,1,1,1,1,1,100,Muy Bien
+Sebastian Camilo Sanabria,1,,,,,,,,55,No funciona por error en el formato de salida
+Sergio Hernández,1,1,1,1,1,1,1,,90,
+Sergio Ivan Rey,1,1,1,,1,1,1,,85,
+PROMEDIO,,,,,,,,,72,
+,,,,,,,,,,
+B = Nota Base,,,,,,,,,,
+C = Compila y exporta bien.,,,,,,,,,,
+D = Nombre del Archivo,,,,,,,,,,
+E = Parámetro,,,,,,,,,,
+F = Es un objeto 3D,,,,,,,,,,
+G = Es un cascarón,,,,,,,,,,
+H = Es una esfera,,,,,,,,,,
+I = Es una esfera homogénea,,,,,,,,,,
