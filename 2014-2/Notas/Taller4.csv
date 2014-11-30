@@ -1,0 +1,23 @@
+Nombre ,Nota,Comentarios
+EdgarCortes,4.5,No arroja los valores corrctos
+LinaresRugeles,4.5,No arroja los valores correctos
+RudyMendez,4,"No arroja los valores correctos, en muchos casos arroja nan"
+Aura Cuervo,2,Cambia el tamaño de la matriz y los elementos de esta no corresponden a lo que se espera
+Billy Revelo,2.5,No retorna los valores correctos
+Daniel Olaya,2,Retorna una matriz de 3x2 siempre
+David Bernal,5,"Está Perfecto, carita feliz de parte del monitor"
+David Garcia,4.9,"Falta poner un espacio entre los números al exportarlos, de resto bien"
+David Jaramillo,5,"Está Perfecto, carita feliz de parte del monitor, muy bien por poner el error"
+Elkin Alvis,1.5,No compila
+Esteban Rivera,2,Retorna una matriz de 1x8 siempre
+Jesus Solano,2,Retorna ceros en todo
+Juan Camilo Farfan,2,No retorna la matriz
+Juan Diego Arango,5,"Está Perfecto, carita feliz de parte del monitor."
+Juan Felipe Mendez,5,"Está Perfecto, carita feliz de parte del monitor."
+Lina Perez,2.5,No retorna los valores correctos
+Luis Pizano,2,Por que pide dos archivos? Cambia el tamaño de la matriz y los elementos de esta no corresponden a lo que se espera
+Luis Rodriguez,1.5,No compila
+Nataly Castillo,2.5,No retorna los valores correctos
+Nicolas Romero,1.7,"No retorna nada, no carga la matriz, no puedo revisar si el algoritmo esta bien"
+Sebastian Sanabria,5,"Está Perfecto, carita feliz de parte del monitor."
+Sergio Hernandez,5,"Está Perfecto, carita feliz de parte del monitor."
