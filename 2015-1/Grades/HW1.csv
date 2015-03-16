@@ -1,0 +1,22 @@
+T1 Lab,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Nombre,P1 (10),P2 (10),P3 (10),P4 (10),P5 (10),P6 (20),P7 (30),Total (100),Comentarios
+ACOSTA PEÑALOZA               ,10,10,10,10,10,18,20,88,"6. Inecesaria la linea antes del sed, 7. No es la forma mas eficiente de hacerlo dentro de un awk se puede hacer todo."
+ALFONSO RODRIGUEZ             ,10,10,10,10,10,20,20,90,7. No es la manera mas eficiente de usar awk
+ALVIS NARVAEZ                 ,10,10,10,10,10,20,20,90,7. No es la manera mas eficiente de usar awk
+AVELLANEDA FRANCO             ,10,10,10,10,10,10,25,85,6. Quedaron mal escritas las palabras. 7. No es la mejor nmanera de usar awk
+CALDAS RIVERA                 ,10,10,10,10,10,20,30,100,
+CIFUENTES PARDO               ,0,0,0,0,0,0,0,0,No hay entrega registrada
+DUQUE SIERRA                  ,5,10,10,10,10,19,25,89,"1. El enunciado indicaba que se debía copiar el archivo, no descargarlo en la carpeta directo. 6. Esta pasando manipulando datalong tambien 7. Faltan resultados. Se puede hacer mejor."
+GONZALEZ LOZANO               ,5,10,10,0,0,5,20,55,1. El enunciado indicaba que se debía copiar el archivo 4. No funciona. 5. No lo hizo. 6. No escoge el archivo correcto 7. No era la manera correcta de usar awk.
+OCHOA TAMAYO                  ,10,10,10,10,10,20,30,100,"
+"
+ORTIZ GUERRERO                ,10,10,10,0,10,20,10,70,4. No funciona. El 5. 6. 7. se probaron con codigo funcional. 7. No es la manera mas eficiente de usar awk. No esta cogiendo los datos
+PATIÑO PAZ                    ,10,10,10,10,10,20,30,100,
+PEREZ ANGEL                   ,0,0,0,0,0,0,0,0,No hay entrega registrada
+QUIROGA FONSECA               ,10,10,10,10,10,20,25,95,7. No es la manera más eficiente de usar awk
+ROSALES COTE                  ,0,0,0,0,0,0,0,0,No hay entrega registrada
+SANCHEZ ISAZA                 ,10,10,10,10,10,20,25,95,7. Tocaba guardar los datos en el archivo datos_TermontinaRio.csv. 
+URDANETA URREA                ,10,10,10,10,10,20,25,95,"7. No es la manera mas eficiente de usar awk. El enunciado indicaba menor, no menor o igual"
+VELASCO MORENO                ,5,10,10,10,10,10,20,75,1. No copió el archivo. Lo descargo en la carpeta. 6. Se equivocó de palabra. 7. Se podía hacer mejor
