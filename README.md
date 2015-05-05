@@ -1,4 +1,3 @@
-ComputationalLab
-================
+# Laboratorio de Métodos Computacionales
 
-All the material for the Computational Lab course at Uniandes.
+Material del Laboratorio de Métodos Computacionales de Uniandes
