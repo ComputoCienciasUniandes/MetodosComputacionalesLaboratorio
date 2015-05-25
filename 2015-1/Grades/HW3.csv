@@ -1,0 +1,21 @@
+T3 Lab,,,,,,
+,,,,,,
+,Compila,GST,Alt,Az,,
+Nombre,10,10,40,40,Total (100),Comentarios
+ACOSTA PEÑALOZA               ,0,0,0,0,0,No entrego
+ALFONSO RODRIGUEZ             ,10,10,35,35,90,Debe tener mas cuidado en el manejo de los angulos. Se complico un poco.
+ALVIS NARVAEZ                 ,10,10,37.5,37.5,95,Hubo un descuido en el manejo de los angulos (conversiones entre radianes y grados)
+AVELLANEDA FRANCO             ,0,0,0,0,0,No Entrego
+CALDAS RIVERA                 ,10,10,40,40,100,
+CIFUENTES PARDO               ,10,10,37.5,37.5,95,Falto una multiplicacion.
+DUQUE SIERRA                  ,10,10,40,40,100,
+GONZALEZ LOZANO               ,10,10,35,35,90,Los angulos deben manejarse con mas cuidado. sin y cos funcionan con angulos en radianes.
+OCHOA TAMAYO                  ,10,10,40,40,100,
+ORTIZ GUERRERO                ,10,10,35,35,90,Falto una multiplicacion. Los angulos deben manejarse con mas cuidado.
+PATIÑO PAZ                    ,10,10,30,30,80,Hizo falta una multiplicacion para el calculo de LST. Mal manejo de los angulos. Sin y Cos funcionan con radianes.
+PEREZ ANGEL                   ,0,0,0,0,0,No entrego
+QUIROGA FONSECA               ,10,10,37.5,37.5,95,Hay una multiplicacion de mas. Podria pasar los angulos solo una vez a radianes.
+ROSALES COTE                  ,0,0,0,0,0,No Entrego
+SANCHEZ ISAZA                 ,10,10,37.5,37.5,95,Hay una multiplicacion de mas. Podria pasar los angulos solo una vez a radianes.
+URDANETA URREA                ,10,10,32.5,32.5,85,"Hay una multiplicacion de mas. Los argumentos no necesariamente deben ser enteros, cuidado con eso."
+VELASCO MORENO                ,0,0,0,0,0,No entrego
