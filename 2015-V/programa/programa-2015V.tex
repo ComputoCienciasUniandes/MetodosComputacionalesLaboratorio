@@ -1,0 +1,97 @@
+% Lab. Metodos Computacionales
+% Curso vacaciones 2015
+\documentclass[letterpaper,10pt,onecolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[intlimits]{amsmath}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage[absolute]{textpos} 
+\usepackage[pdftex]{color,graphicx}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\textwidth}{490pt}
+\setlength{\textheight}{680pt}
+\setlength{\topmargin}{-40pt}
+\addtolength{\hoffset}{-0.3cm}
+%\usepackage{pifont}
+\usepackage{xcolor}
+\usepackage{fourier-orns}
+\usepackage{tabularx}
+
+\hypersetup{%
+  colorlinks=true,% hyperlinks will be coloured
+  urlcolor=blue
+}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{flushleft}
+
+%\includegraphics[width=490pt]{header.png}\\[0.5cm]
+
+\textsc{\huge Laboratorio\\Métodos Computacionales}\\[0.01cm]
+
+%\Large \textsc{Programa}\\[0.1cm]
+\normalsize (FISI 2029) \\
+Curso de vacaciones 2015
+
+\end{flushleft}
+		\begin{textblock*}{20mm}(140mm,15mm)
+  			\includegraphics[height=30 mm]{andes.png}
+		\end{textblock*}
+
+\noindent
+Profesor: Juan David Lizarazo, email: \textbf{jd.lizarazo10}\\
+Oficina: I113 // Horario de atención: martes de 8 a 10 AM. \\ 
+\vspace{0.3cm}
+
+%\hfill\begin{minipage}{\dimexpr\textwidth-3cm}
+%\begin{flushright}\textit{``Computers are incredibly fast, accurate and stupid. On the other hand, a well trained operator as compared with a computer is incredibly slow, inaccurate and brilliant.'' Together they are powerful beyond imagination.}\end{flushright}
+%\end{minipage}
+
+%\noindent \\[-0.7cm]
+%\begin{flushright}\textsc{$\approx$ Leo Cherne - 1969}\end{flushright}
+
+\vspace{0.1cm}
+
+Este curso acompaña y complementa las actividades prácticas del curso Métodos Computacionales. En ocasiones también va a ser el escenario para hacer experimentos computacionales bajo el mismo rigor que experimentos \textit{ordinarios}. El curso utiliza una bitácora de laboratorio (50\%) y talleres (50\%) como herramientas de aprendizaje. Los talleres pueden ser experimentos o ejercicios, son para hacer enteros en el laboratorio y van a ser evaluados a partir de una muestra aleatoria. La asistencia es obligatoria en el sentido que faltar a más de tres clases (sin justificación) significa reprobar el curso con una nota de $2.0$. 
+
+La bitácora de laboratorio debe registrar los resultados de los experimentos llevados a cabo en clase y contener apuntes sobre programación y métodos computacionales practicados. Además debe tener contribuciones semanales a la sección \textit{projectos} en la que se reúnan ideas para el proyecto final del curso Métodos Computacionales. Debe ser escrita en Markdown, estar alojada en GitHub y va a ser valorada dos veces de acuerdo a la siguiente rúbrica:
+\vspace{0.5cm}
+
+\begin{minipage}{\dimexpr\textwidth-1cm}
+\footnotesize
+\textbf{100} El registro de las actividades realizadas en el laboratorio es completo y detallado. La bitácora está además decorada con numerosas ``recetas'' para hacer diferentes tareas computacionales. Cada entrada va acompañada de la fecha correspondiente y no hay casi ninguna falta de ortografía o error de programación. El uso de Markdown es intachable y exhaustivo (listas, código, secciones, formato, imágenes). El registro de \textit{commits} de la bitácora muestra un trabajo constante a lo largo de todo el curso. No falta ninguna contribución semanal a la sección \textit{Proyectos}, todas ellas son interesantes y son evidencia de gran creatividad.
+
+\textbf{80} El registro de las actividades realizadas en el laboratorio es completo y detallado con algunas omisiones. La bitácora tiene algunas ``recetas'' para hacer diferentes tareas computacionales con algunas omisiones. Cada entrada va acompañada de la fecha correspondiente. La bitácora tiene algunos errores de ortografía o de programación. El uso de Markdown es satisfactorio usando la mayoría de sus posibilidades. El registro de \textit{commits} muestra un trabajo constante con algunas omisiones. No hace falta ninguna contribución semanal a la sección \textit{Proyectos} y todas ellas son de buena calidad.
+
+\textbf{60} El registro de las actividades realizadas en el laboratorio es completo y con un nivel de detalle superficial. La bitácora contiene solamente ``recetas'' para tareas básicas y puede contener varios errores de ortografía y de programación. El uso de Markdown es muy simple limitándose a usar secciones y formato. Pueden faltar algunas contribuciones semanales a la sección \textit{Proyectos} y la mayoría son superficiales.
+
+\textbf{40} El registro de las actividades realizadas en el laboratorio tiene significativas omisiones y evidencia falta de constancia. La bitácora contiene muy pocas ``recetas'' para llevar a cabo diferentes tareas computacionales. El uso de Markdown es insuficiente y los bloques de código incluidos tienen numerosos errores de programación. El registro de \textit{commits} evidencia contribuciones solamente esporádicas. Las contribuciones a la sección \textit{Proyectos} son insuficientes.
+
+\textbf{20} No se hace la bitácora.
+
+\end{minipage}
+\vspace{0.5cm}
+
+\noindent \hrulefill~ \raisebox{-1pt}[10pt][10pt]{\leafleft}~ \hrulefill
+
+\begin{itemize}
+\item  R. Landau, M. Paez, C. Bordeianu. \href{http://www.compadre.org/psrc/items/detail.cfm?ID=11578}{A Survey of Computational Physics: Python Multimodal eBook}, 2012.
+%\ding{168} \ding{171}
+\item  J. Guttag. \textit{Introduction to Computation and Programming Using Python}, 2013.
+\item  A. Tveito, H. Langtangen, B. Nielsen, X. Cai  \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-3-642-11299-7}{Elements of Scientific Computing}, 2010.
+\item S. Chacon, B. Straub. \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-1-4302-1834-0}{Pro Git}, 2014.
+\item B. Stephenson. \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-3-319-14240-1}{The Python Workbook}, 2015.
+\item C. Johnson. \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-1-4302-1998-9}{Pro Bash Programming}, 2009.
+\item I. Horton. \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-1-4302-0243-1}{Beginning C}, 2006.
+\item B. Kernighan \& D. Ritchie. \textit{The C programming language.}
+\item P. Scherer, \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-3-642-13990-1}{Computational Physics}, 2010.
+\item R. Shonkwiler, F. Mendivil.  \href{http://link.springer.com.ezproxy.uniandes.edu.co:8080/book/10.1007\%2F978-0-387-87837-9}{Explorations in Monte Carlo Methods}, 2009.
+\end{itemize}
+
+\end{document}
