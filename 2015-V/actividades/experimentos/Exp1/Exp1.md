@@ -1,11 +1,11 @@
-#Experimento 1 - Distribución de Velocidades de Maxwell - Boltzmann
+#Experimento 1 - Distribución de Velocidades de Maxwell - Boltzmann 2D
 *Métodos Computacionales - Laboratorio*
 
 10-Jun-2015
 
 Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Experimentos/Exp1/. No olvide al final hacer un *commit* y un *push*.
 
-Descargue el [software](http://www.ph.biu.ac.il/~rapaport/mdbook/) del libro *The Art of Molecular Dynamics Simulation de Rapaport*, descomprima y reemplace el archivo `/src/pr_02_1.in` con [esta](lkjdsaflkjsdlfñ) ligera modificación. El código simula un gas de discos suaves que interactúan de acuerdo al [potencial de Lennard Jones](http://en.wikipedia.org/wiki/Lennard-Jones_potential) truncado. El método de integración empleado es el [leapfrog method](http://en.wikipedia.org/wiki/Leapfrog_integration),
+Descargue el [software](http://www.ph.biu.ac.il/~rapaport/mdbook/) del libro *The Art of Molecular Dynamics Simulation de Rapaport*, descomprima y reemplace el archivo `/src/pr_02_1.in` con [esta](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/experimentos/Exp1/pr_02_1.c) ligera modificación. El código simula un gas de discos suaves que interactúan de acuerdo al [potencial de Lennard Jones](http://en.wikipedia.org/wiki/Lennard-Jones_potential) truncado. El método de integración empleado es el [leapfrog method](http://en.wikipedia.org/wiki/Leapfrog_integration). Las velocidades iniciales de las partículas tienen una distribución uniforme y sus posiciones iniciales se toman en una cuadrícula.
 
 Compile usando:
 
@@ -19,12 +19,12 @@ Copie el ejecutable a una nueva carpeta llamada *MB* junto con el archivo de con
 ./pr_02_1 < pr_02_1.in
 ```
 
-Las condiciones experimentales están determinadas por las siguientes cantidades
+Las condiciones experimentales están determinadas por las siguientes cantidades.
 
 | deltaT        | descripción |
 |:-------------:|
-| density | densidad, determina el espaciamiento entre átomos |
-| initUcell | tamaño de la cuadrícula, un átomo por celda |
+| density | densidad, determina la separación inicial entre partículas |
+| initUcell | tamaño de la cuadrícula, una partícula por celda |
 | stepAvg | número de iteraciones entre toma de datos |
 | stepEquil | iteraciones esperadas para llegar al equilibrio |
 | stepLimit | número de pasos máximos |
