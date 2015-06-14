@@ -55,4 +55,4 @@ initUcell -> 40 40
 
 Guarde los resultados del experimento en el archivo `Rayleigh.csv`. Haga el análisis de datos en un cuaderno de iPython llamado `Rayleigh.ipynb` incluyendo animaciones, histogramas y ajustes de tipo apropiado. Nuestra hipótesis es que en equilibrio las rapideces  se distribuyen de acuerdo a la distribución de [Rayleigh](http://en.wikipedia.org/wiki/Rayleigh_distribution), decida si sus datos confirman o refutan esta hipótesis. El informe debe incluir al menos tres secciones: introducción, análisis de datos y conclusiones.
 
-**Al terminar la clase ejecute `lottery.sh` para saber si el informe de su experimento va a ser revisado.**
+<!--**Al terminar la clase ejecute `lottery.sh` para saber si el informe de su experimento va a ser revisado.**-->
