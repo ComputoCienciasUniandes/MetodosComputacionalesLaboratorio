@@ -5,7 +5,7 @@
 
 Guarde el informe del experimento en su repositorio de GitHub en la carpeta /MC/Experimentos/Exp1/. No olvide al final hacer un *commit* y un *push*.
 
-Descargue el [software](http://www.ph.biu.ac.il/~rapaport/mdbook/) del libro *The Art of Molecular Dynamics Simulation de Rapaport*, descomprima y reemplace el archivo `/src/pr_02_1.in` con [esta](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/experimentos/Exp1/pr_02_1.c) ligera modificación. 
+Descargue el [software](http://www.ph.biu.ac.il/~rapaport/mdbook/) del libro *The Art of Molecular Dynamics Simulation de Rapaport*, descomprima y reemplace el archivo `/src/pr_02_1.c` con [esta](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/experimentos/Exp1/pr_02_1.c) ligera modificación. 
 
 El código simula un gas de discos suaves que interactúan de acuerdo al [potencial de Lennard Jones](http://en.wikipedia.org/wiki/Lennard-Jones_potential) truncado. El método de integración empleado es el [leapfrog method](http://en.wikipedia.org/wiki/Leapfrog_integration). Las velocidades iniciales de las partículas tienen una distribución uniforme y sus posiciones iniciales se toman en una cuadrícula.
 
@@ -47,8 +47,9 @@ El output del experimento son una serie de líneas con las posiciones y velocida
 El objetivo de nuestro experimento es estudiar la distribución de probabilidad de las las rapideces de las partículas. Ejecute el experimento cambiando en el archivo de configuración lo siguiente: 
 
 ```
-stepAvg -> 2
-stepLimit -> 500
+density -> 0.3
+stepAvg -> 50
+stepLimit -> 1000
 initUcell -> 40 40
 ```
 
