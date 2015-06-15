@@ -26,7 +26,7 @@ Copie el ejecutable a una nueva carpeta llamada *MB* junto con el archivo de con
 Las condiciones experimentales están determinadas por las siguientes cantidades.
 
 | deltaT        | descripción |
-|:-------------:|
+|:-------------:|:-------------:|
 | density | densidad, determina la separación inicial entre partículas |
 | initUcell | tamaño de la cuadrícula, una partícula por celda |
 | stepAvg | número de iteraciones entre toma de datos |
