@@ -5,7 +5,8 @@
 
 Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Talleres/Taller3/. No olvide al final hacer un *commit* y un *push*.
 
-# gcc, gnuplot y bash
+## gcc, gnuplot y bash
+
 
 Clone el repositorio [c-examples](https://github.com/tisnik/c-examples) de Pavel Tišnovský. **¡No lo clone al interior de su repositorio personal!**
 
