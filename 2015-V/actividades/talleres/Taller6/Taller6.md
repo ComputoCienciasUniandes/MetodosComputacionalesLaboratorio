@@ -15,12 +15,16 @@
 	* ✵ Usando vectores unitarios en dirección norte y oriente, calcule las coordenadas de los vectores de desplazamiento en ese sistema de coordenadas local. Tome como coordenadas de referencia: latitud 4.5981, longitud -74.0758. Haga una gráfica con la trayectoria. Si quiere que aparezca junto con un mapa busque información sobre **smopy**. 
 	* ✵✵ Ahora calcule la distancia recorrida en función del tiempo estimando numéricamente la integral
 
-	![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/dist_int.png?raw=true =300x).
+		![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/dist_int.png?raw=true =200x). 
+		
+		Haga una gráfica.
+
+	![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/tripdist.png?raw=true =500x).
 	
 	* ✵ Estime el tiempo requerido para terminar de recorrer 1, 2 .. 9 km y la posición (en latitud y longitud) en esos instantes.
 	* ✵✵ Ahora calcule la rapidez en función del tiempo usando *forward differences*. Tenga en cuenta que los datos no están uniformemente espaciados.
 	
-	![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/tripdist.png?raw=true =300x).
+
 	* ✵✵✵ Lo anterior debe resultar muy irregular, proponga alguna estrategia para obtener algo más razonable e impleméntela.
 	
 
