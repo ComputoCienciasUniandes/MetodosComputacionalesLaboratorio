@@ -6,6 +6,8 @@ Material del Laboratorio de Métodos Computacionales de Uniandes
 
 ## Talleres
 
+* [Taller 9](https://github.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/blob/master/2015-V/actividades/talleres/Taller9/Taller9.ipynb) (14-Jul-2015 & 15-Jul-2015)
+* [Taller 8](https://github.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/blob/master/2015-V/actividades/talleres/Taller8/Taller8.md) (08-Jul-2015 & 10-Jul-2015)
 * [Taller 7](https://github.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/blob/master/2015-V/actividades/talleres/Taller7/Taller7.md) (01-Jul-2015 & 03-Jul-2015)
 * [Taller 6](https://github.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/blob/master/2015-V/actividades/talleres/Taller6/Taller6.md) (24-Jun-2015)
 * [Taller 5](https://github.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/blob/master/2015-V/actividades/talleres/Taller5/Taller5.md)
