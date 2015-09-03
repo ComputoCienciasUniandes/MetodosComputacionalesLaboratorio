@@ -1,0 +1,105 @@
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+% 2015-10
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen completa en la portada
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\decimalpoint
+%\usepackage{pst-barcode}
+%\usepackage{auto-pst-pdf}
+
+\newcommand{\base}[1]{\underline{\hspace{#1}}}
+\boxedpoints
+\pointname{ pt}
+%\extrawidth{0.75in}
+%\extrafootheight{-0.5in}
+\extraheadheight{-0.15in}
+%\pagestyle{head}
+
+%\noprintanswers
+%\printanswers
+
+
+\usepackage{upquote,textcomp}
+\newcommand\upquote[1]{\textquotesingle#1\textquotesingle} % To fix straight quotes in verbatim
+
+\begin{document}
+\begin{center}
+{\Large Laboratorio de Métodos Computacionales} \\
+Taller 3 \\
+Profesor: Felipe G\'omez\\
+Fecha de Publicación: {\small \it Septiembre 3 de 2015}\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes.png}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(161mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes.png}
+\end{textblock*}
+
+\vspace{0.5cm}
+
+{\Large Instrucciones de Entrega}\\
+
+\noindent
+La solución a este taller debe subirse por SICUA antes de las 12:59PM
+del jueves 03 de Septiembre del 2015. 
+\noindent
+Si la soluci\'on est\'a en SICUA
+antes de las 8:30AM del jueves 03 de Septiembre 2015 se calificar\'a
+el taller sobre 100 puntos. 
+\noindent
+Debe entregarse un archivo llamado \verb"NombreApellido_hw3.ipynb".
+
+\par
+
+Todas los algoritmos deben ser implementados con funciones b\'asicas
+de python, la función \verb"np.linalg.solve()", la librería \verb"numpy"
+para arrays y la librería \verb"matplotlib"para realizar gráficas.
+
+\begin{questions}
+
+\question[20] {\bf{Temperatura en Munich}} en el archivo 
+\url{http://xurl.es/munich.txt} se encuentra la temperatura promedio de 
+la ciudad de Munich desde 1995 hasta 2013. 
+Ajuste la función f(x) a los datos y grafique.
+
+$$f(x) = a \cos \left( 2\pi t + b \right) + c $$
+
+Es necesario eliminar los datos donde la temperatura alcance valores
++99 y -99.
+
+\question[20]{\bf"Bondad del ajuste " $\chi^2 $} Para tener idea de qué tan bueno es el modelo, calcule la varianza del error cuadrático como la suma del cuadrado de la diferencia entre cada dato obsevado y el dato predicho por el ajuste.
+$$ \chi^2 = \sum_{i=0}^{N} \frac{ \left(T_{\textrm{obs}} - T_\textrm{fit}
+\right)^2}{N-1} $$
+
+\question[20] {\bf{Calentamiento Global}}
+ ¿Existe evidencia de calentamiento global? Si suponemos que la temperatura media ha aumentado en la última década, podemos añadir un término lineal.
+Ajuste a los datos la función g(t) y grafique.
+
+$$f(x) = k \cos \left( 2\pi t + w \right) + m\times t + p$$
+
+
+\question[20]{\bf{Bondad del ajuste} $\chi_\textrm{cg}^2$}
+Calcule de nuevo la varianza del error cuadrático en este nuevo modelo.
+$$ \chi_\textrm{cg}^2 = \sum_{i=0}^{N} \frac{ \left(T_{\textrm{obs}} - T_\textrm{fit cg}\right)^2}{N-1} $$
+
+\question[20]{\bf{Evidencia del calentamiento global}} ¿Cuál de los dos modelos tiene mejor ajuste?
+\end{questions}
+
+
+\end{document}
