@@ -1,0 +1,100 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+% 2015-10
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen completa en la portada
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\decimalpoint
+%\usepackage{pst-barcode}
+%\usepackage{auto-pst-pdf}
+
+\newcommand{\base}[1]{\underline{\hspace{#1}}}
+\boxedpoints
+\pointname{ pt}
+%\extrawidth{0.75in}
+%\extrafootheight{-0.5in}
+\extraheadheight{-0.15in}
+%\pagestyle{head}
+
+%\noprintanswers
+%\printanswers
+
+
+\usepackage{upquote,textcomp}
+\newcommand\upquote[1]{\textquotesingle#1\textquotesingle} % To fix straight quotes in verbatim
+
+\begin{document}
+\begin{center}
+{\Large Laboratorio de Métodos Computacionales} \\
+Taller 7 \\
+Profesor: Felipe G\'omez\\
+Fecha de Publicación: {\small \it Noviembre 12 de 2015}\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes.png}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(161mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes.png}
+\end{textblock*}
+
+\vspace{0.5cm}
+
+{\Large Instrucciones de Entrega}\\
+
+\noindent
+La solución a este taller debe subirse por SICUA antes de las 12:59PM
+del s\'abado 14 de noviembre de 2015. Debe entregarse un archivo llamado
+\verb"NombreApellido_hw7.ipynb". Este puede iniciar con \verb"%pylab inline"
+
+\begin{questions}
+
+\question[100] {\bf{Ajuste de modelo parabólico con MCMC}} 
+
+En el repositorio de github se encuentra el repositorio visto en clase
+
+\href{https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/notes/14.MonteCarloMethods/bayes_MCMC.ipynb}{MetodosComputacionales/notes/14.MonteCarloMethods/bayes\_MCMC.ipynb}
+
+\noindent junto con el archivo \verb"movimiento.dat". Realice un ajuste de los datos a un modelo parabólico de la forma 
+
+$$ y_{fit}= A + B x + C x^2$$
+
+utilizando el algoritmo de Cadena de Markov Monte-Carlo (MCMC) teniendo en cuenta:
+\begin{itemize}
+ \item La funci\'on de error est\'a definida como $\chi^2 = \sum _i ^n \left( Y_{obs} - Y_{fit} \right)^2$
+ \item La funci\'on de verosimilitud est\'a escrita como $\mathcal{L} = \exp(-\chi^2)$
+ \item El criterio de selecci\'on est\'a dado por
+       $\alpha=\mathcal{L}_{new} / \mathcal{L}_{old} \geq 1.0$
+ \item Si $\chi^2$ es grande, entonces $\mathcal{L}$ ser\'a muy peque\~no 
+       y la m\'aquina lo puede hacer igual a cero. El criterio de 
+       selecci\'on encontrar\'ia una divisi\'on del tipo $0/0$
+ \item Se puede trabajar con un nuevo criterio de selecci\'on 
+       que sea el logaritmo de $\alpha$ para aceptar de inmediato
+       los nuevos par\'ametros.
+       $$ \gamma = -\chi^2_{old}+\chi^2_{new} \geq 0  $$
+ \item Si $\gamma<0$, generar el n\'umero aleatorio $\beta$ y verificar la condici\'on
+       $$ \beta \leq \exp(\gamma) = \alpha $$
+       Si se cumple aceptar de inmediato los nuevos par\'ametros, si no, rechazarlos.
+\end{itemize}
+
+Realizar las gr\'aficas de par\'ametros vs. $\chi^2$, histogramas de par\'ametros
+y la gr\'afica del ajuste del modelo a los datos observacionales con los
+mejores par\'ametros.
+
+\end{questions}
+
+
+\end{document}
