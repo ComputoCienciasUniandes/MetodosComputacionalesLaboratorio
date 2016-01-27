@@ -7,7 +7,7 @@ Escribir un script de Python llamado sroot.py que calcule la raíz cuadrada de u
 
 - Segundo: Añada una condición para que el programa pare de iterar (y devuelva la solución) cuando la iteraciones sucesiva de la solución cambien en menos de 1e-14.
 
-- Tercero: Dé formato a la salida que muestra la solución, para que salga siempre en formato de punto fijo y en formato científico.
+- Tercero: Dé formato a la salida que muestra la solución, para que aparezca en formato de punto fijo. Pruebe también a dejarlo en formato científico.
 
 - Cuarto: Modifique su script para que ahora sea una función llamada sqrt2(x). Dentro de IPython, ejecute el script, y ejecute la función para probarla. Luego de un %reset, importe el módulo sroot, y ejecute la función sroot.sqrt2 para probar que funcione sobre distintos argumentos. Qué cambia en la manera de llamar la función si importamos directamente la función desde el módulo sroot?
 
@@ -15,21 +15,7 @@ Escribir un script de Python llamado sroot.py que calcule la raíz cuadrada de u
 
 - Sexto: Especifique dentro de la función lo que debe ocurrir cuando el argumento sea 0. Especifique que la función retorne un nan cuando el argumento sea negativo, junto con un mensaje de error.
 
-- Quinto: Usando assert, verifique que el argumento de la función sea un float.
+- Séptimo: Usando assert, verifique que el argumento de la función sea un float.
 
 - Octavo: Añada un modo debug, para que en la ejecución del programa no muestre las iteraciones a menos que debug sea True.
 
-
-
-
-
-
-
-
-
-
-
-
-```sh
-$   awk -F "\"*,\"*" '{print $3}' file.csv
-```
