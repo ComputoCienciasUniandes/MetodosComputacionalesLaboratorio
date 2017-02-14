@@ -1,0 +1,82 @@
+\documentclass[11pt,letterpaper]{exam}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\decimalpoint
+
+\begin{document}
+\begin{center}
+
+\includegraphics[width=16cm]{header.png}
+
+\vspace{1.0cm}
+{\Large Laboratorio de M\'etodos Computacionales - Ejercicio 1} \\
+\textsc{Semana 4}\\
+2017-I\\
+\end{center}
+
+%\begin{textblock*}{40mm}(10mm,20mm)
+%  \includegraphics[width=3cm]{logoUniandes.png}
+%\end{textblock*}
+
+%\begin{textblock*}{40mm}(164mm,20mm)
+%  \includegraphics[width=3cm]{logoUniandes.png}
+%\end{textblock*}
+
+\vspace{0.5cm}
+
+\noindent
+Los archivos del c\'odigo fuente debe subirse a Sicua plus en un \'unico archivo \verb'.zip' con el nombre del estudiante en el formato \verb"NombreApellido.zip" antes que termine la clase.
+
+El enlace al archivo que vamos a utilizar es:
+
+\url{https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2017-1/lab4_EJ1/red3.txt}
+
+El archivo contiene los datos de longitud de onda en nan\'ometros (columna 1) e intensidad (columna 2) para un diodo l\'aser.
+
+\vspace{0.5cm}
+
+\begin{questions}
+ 
+\question[1.5]
+
+Escribir un script \verb'.sh' que realice lo siguiente:
+
+\begin{itemize}
+	\item (0.1 pts.) Descargue el archivo de datos \verb'red3.txt'
+	\item (1 pts.) Genere un archivo \verb'red3_filtrado.txt' que contenga todas las filas de \verb'red3.txt' donde la intensidad es mayor a $2000$.
+	\item (0.2 pts.) Ejecute el script de Python \verb'plots_laser.py'.
+	\item (0.2 pts.) Borre el archivo de datos \verb'red3.txt' y el archivo \verb'red3_filtrado.txt'.
+\end{itemize}
+
+\question[3.5]
+
+El script \verb'plots_laser.py' debe realizar lo siguiente
+
+\begin{itemize}
+	\item (0.5 pts.) Leer el archivo \verb'red3_filtrado.txt' y guardar la longitud de onda y la intensidad en arreglos.
+	\item (0.5 pts.) Graficar intensidad vs. longitud de onda y guardar la gr\'afica en el archivo \verb'red3.png'.
+	\item (0.5 pts.) Imprimir la longitud de onda a la cual la amplitud es m\'axima. Mostrarlo en un mensaje de la siguiente manera:
+		\begin{verbatim}
+		La longitud de onda de maxima amplitud es n nm
+		\end{verbatim}
+	donde \verb'n' es el n\'umero que obtengan.
+	\item (1 pts.) Realizar un fit a una funci\'on Gaussiana de la forma $y(x) = a\cdot e^{-(x-b)^2/c}$, se sugiere usar \verb'scipy.optimize.curve_fit'.
+	\item (0.5 pts.) Graficar en una misma figura la intensidad vs. longitud de onda (gr\'afica anterior) y el resultado del ajuste. Deben verificar que la funci\'on obtenida efectivamente ajuste los datos. Guardar la gr\'afica en el archivo \verb'red3_fit.png'
+	\item (0.5 pts.) Imprimir la longitud de onda a la cual la funci\'on ajustada es m\'axima. Mostrarlo en un mensaje de la siguiente manera:
+		\begin{verbatim}
+		La longitud de onda de maxima amplitud segun el ajuste es n nm
+		\end{verbatim}
+	donde \verb'n' es el n\'umero que obtengan.
+\end{itemize}
+
+\end{questions}
+
+\end{document}
