@@ -103,12 +103,4 @@ plot_eigen(data_matrix, 0, 1, vectors, labels, 'pca_fr_fl.pdf')
 plot_eigen(data_matrix, 0, 2, vectors, labels, 'pca_bl_fl.pdf')
 
 
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
 
