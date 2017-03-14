@@ -1,0 +1,21 @@
+ID de alumno,Ej 1 (/5),Ej 2 (/5),Ej 3 (/5),Ej 4 (/5),Ej 5 (/5),Definitiva (/5),Bono magistral (/5),Comentarios ej 2
+201512652,5,4.8,,,,,,"Error en el .sh, no debe ir con ../. Los vectores propios no son los correctos. Las graficas de los vectores propios presentan errores"
+201223827,5,5.5,,,,,,La ultima grafica esta repetida
+201216886,0,0,,,,,,
+201318114,2.7,2.15,,,,,,No se debe abrir el editor de texto en el .sh. Error de sintaxis en la grafica. La funcion stats.norm() no realiza lo solicitado. La matriz de covarianza se debe generar sobre la matriz de datos.
+201313636,5,4.7,,,,,,Los vectores propios escogidos no son los correctos. Las ultimas graficas no son las correctas.
+201326239,2,2.8,,,,,,Errores de sintaxis en el script sh. La grafica no se genera correctamente
+201215953,2,2.95,,,,,,"La normalizacion no es la correcta, la funcion np.cov debe aplicarse sobre una matriz"
+201314242,0,2.8,,,,,,
+201224514,2.9,3.9,,,,,,El directorio Dir_Room no debe tener / antes. La matriz de covarianza y los vectores deben hallarse sobre los datos normalizados
+201425109,1.5,3.4,,,,,,"Nombre del archivo incorrecto. Matriz de covarianza incorrecta, no imprime los vectores."
+201421843,0,0,,,,,,
+201327102,3.2,4.9,,,,,,"Falta normalizar por la varianza, no muestra las ultimas graficas."
+201424001,5,6,,,,,,
+201216203,0,0,,,,,,
+201515899,0,2.7,,,,,,Ejes en las graficas no rotulados
+201327366,5,5.3,,,,,,"No es necesario hacer > en wget. Los vectores propios no son los apropiados, La normalizacion esta incompleta. Las ultimas graficas estan incompletas."
+201317958,0,5.4,,,,,,El formato de las graficas no es el correcto
+201414704,0,4.75,,,,,,La matriz de covarianza no es la correcta
+201225345,2.6,4.05,,,,,,"Faltan pasos en el .sh, datos no normalizados, no incluye los vectores en las ultimas graficas."
+201225506,1.9,2.8,,,,,,"Hay varios errores de sintaxis en la grafica y la declaracion de variables, La matriz de covarianza debe calcularse sobre los datos normalizados."
