@@ -1,0 +1,21 @@
+ID de alumno,Ej 1 (/5),Ej 2 (/5),Ej 3 (/5),Ej 4 (/5),Ej 5 (/5),Definitiva (/5),Bono magistral (/5),Comentarios ej 3
+201512652,5,4.8,4.5,,,4.7666666667,,1 Falto tomar la parte real. 2. Errores de indentation
+201223827,5,5.5,4.9,,,5.1333333333,,"2. Como definio las listas x = v = np.zeros(n), v siempre va a ser igual a x. Se deben definir en lineas separadas, o bien, escribiendo x, v = np.zeros(n), np.zeros(n)"
+201216886,0,0,0,,,0,,
+201318114,2.7,2.15,3.1,,,2.65,,1. Los filtros no estan completamente correctos. 2. Errores de sintaxis. Falta
+201313636,5,4.7,5,,,4.9,,
+201326239,2,2.8,2.9,,,2.5666666667,,"2. Falta, errores de sintaxis"
+201215953,2,2.95,3.2,,,2.7166666667,,"1. Los filtros no estan correctamente realizados. 2. Errores de indentation, falta "
+201314242,0,2.8,5,,,2.6,,
+201224514,2.9,3.9,2.5,,,3.1,,1. Imagen guardada incorrectamente
+201425109,1.5,3.4,4.05,,,2.9833333333,,1. Error de sintaxis 2. Falta
+201421843,0,0,0,,,0,,
+201327102,3.2,4.9,3.7,,,3.9333333333,,2. Los avances en x y v no son los correctos. Falta
+201424001,5,6,6,,,5.6666666667,,
+201216203,0,0,0,,,0,,
+201515899,0,2.7,0,,,0.9,,
+201327366,5,5.3,5.6,,,5.3,,"1 Imagen guardada incorrectamente. 2 Muchos errores de sintaxis, constantes sin definir y errores de indentation."
+201317958,0,5.4,1.9,,,2.4333333333,,1 Muchos errores de sintaxis. La imagen no fue filtrada correctamente
+201414704,0,4.75,2.9,,,2.55,,"1 Imagen guardada incorrectamente, filtro parcialmente correcto. 2 Falta"
+201225345,2.6,4.05,4.8,,,3.8166666667,,"2. Falta, errores de sintaxis"
+201225506,1.9,2.8,4.6,,,3.1,,2. Muchos errores de sintaxis. Falta
