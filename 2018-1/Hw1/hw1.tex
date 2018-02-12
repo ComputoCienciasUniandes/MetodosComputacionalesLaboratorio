@@ -1,0 +1,105 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large M\'etodos Computacionales} \\
+Tarea 1 - \textsc{Linux y Python Básico}\\
+01-2018\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(164mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\vspace{0.3cm}
+
+\noindent
+La soluci\'on a este taller debe subirse por SICUA antes de terminada la clase.
+%\noindent
+%Si la soluci\'on est\'a en SICUA
+%antes de las 8:30AM del domingo 31 de Enero del 2016 se calificar\'a
+%el taller sobre 125 puntos. 
+\noindent
+Los archivos c\'odigo fuente deben subirse en un \'unico archivo
+\verb".zip" con el nombre \verb"NombreApellido_hw1.zip", por ejemplo
+yo deber\'ia subir el zip \verb"JesusPrada_hw1.zip" (10 puntos). Recuerden que es un trabajo individual.
+
+\vspace{0.3cm}
+
+\begin{questions}
+
+\question[50] {\bf{Fizz-Buzz}}
+
+En el conocido \textit{drinking game} Fizz-Buzz, se van contando los n\'umeros de 1 en 1 teniendo en cuenta dos condiciones principales:
+
+\begin{itemize}
+\item \textbf{Buzz}: Cada vez que se llegue un n\'umero m\'ultiplo de 7 o que contenga un 7, se debe decir "Buzz" en lugar del n\'umero.
+\item \textbf{Fizz}: Cada vez que se llegue a un n\'umero m\'ultiplo de 3, se debe decir "Fizz" en lugar del n\'umero.
+\item Si se cumplen ambas condiciones, se debe decir "Fizz-Buzz" 
+\end{itemize}
+
+Cree un programa en python en un archivo llamado \textbf{Fizz-Buzz.py} que juegue a Fizz-Buzz perfectamente con los n\'umeros del 1 al 100. El programa deber\'a imprimir los n\'umeros a menos de que se cumpla alguna de las anteriores condiciones, en cuyo caso deber\'a imprimir la palabra que corresponde. El output del programa debe ser como el siguiente:
+
+\begin{verbatim}
+1
+2
+Fizz
+4
+5
+Fizz
+Buzz
+8
+Fizz
+10
+...
+\end{verbatim}
+
+\question[60] {\bf{Notas de Clase}}
+
+En el archivo \textbf{Notas.zip} encontrar\'an 3 archivos con valores separados por comas "*.csv". En cada columna de cada archivo est\'an consignadas las 4 notas de cada secci\'on del curso Mec\'anica Anal\'itica. La asistencia a la clase no era muy buena, por lo cual hay valores \textbf{NaN} que deber\'an ser tomados como 0. Todas las notas est\'an sobre 5, excepto la \'ultima columna que es sobre 8. Desde el inicio del curso se decidi\'o que el porcentaje de cada nota ser\'ia \textbf{20-25-25-30} respectivamente. \\
+
+Cree un script \textbf{Notas.sh} que calcule cu\'antos estudiantes, de todas las secciones, pasaron la materia y cu\'antos la perdieron. El script  debe arrojar un mensaje como el siguiente:
+
+\begin{verbatim}
+N estudiantes pasaron el curso
+M estudiantes perdieron el curso
+\end{verbatim}
+
+Donde \textit{N,M} son los respectivos n\'umeros.
+
+\textit{Ayuda:} Tenga en cuenta los siguientes comandos
+
+\begin{itemize}
+\item \verb"cat" : Concatena archivos
+\item \verb"sed" : Reemplaza cadenas de caracteres
+\item \verb"wc"  : Cuenta n\'umero de l\'ineas, palabras y bytes
+\item \verb"awk" : Hace operaciones iterativamente. (El separador default no es ",")
+\item \verb">"   : Redirecciona el output de un comando a un archivo
+\item \verb"|"   : Redirecciona el output de un comando como input de otro comando
+\end{itemize}
+
+
+\end{questions}
+
+\end{document}
