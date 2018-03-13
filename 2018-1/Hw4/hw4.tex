@@ -1,0 +1,102 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath,amssymb}
+\usepackage{bigints}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large M\'etodos Computacionales} \\
+Tarea 4 - \textsc{Derivaci\'on num\'erica}\\
+01-2018\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(164mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\vspace{0.3cm}
+
+\noindent
+La soluci\'on a este taller debe subirse por SICUA antes de terminada la clase.
+%\noindent
+%Si la soluci\'on est\'a en SICUA
+%antes de las 8:30AM del domingo 31 de Enero del 2016 se calificar\'a
+%el taller sobre 125 puntos. 
+\noindent
+Los archivos c\'odigo fuente deben subirse en un \'unico archivo
+\verb".zip" con el nombre \verb"NombreApellido_hw4.zip", por ejemplo
+yo deber\'ia subir el zip \verb"JesusPrada_hw4.zip" (10 puntos). Recuerden que es un trabajo individual y debe ser realizado en un script de python (.py).
+
+\vspace{0.3cm}
+
+En el archivo \verb"planets.zip" encontrar\'an las coordenadas de los planetas del sistema solar desde el 2010. Cada archivo consta de 5 columnas con los valores de A\~no ,D\'ia,Radio(UA) ,Latitud(deg) y Longitud(deg), respectivamente. El objetivo de este taller es que a partir de los datos de cada planeta, y usando derivaci\'on num\'erica, puedan estimar la masa del sol.\\
+
+Pero antes, un poco de teor\'ia. La tercera ley de Kepler nace considerar el equilibrio entre el momento angular de un planeta y su respectiva fuerza centr\'ipeta por el sol. Esto nos lleva a la ecuaci\'on:
+
+\begin{equation}
+mr\omega^2 = \frac{GMm}{r^2},
+\end{equation}
+
+donde $r$ ha de tomarse como el semi-eje mayor de la elipse que describe el planeta.\\
+
+Si queremos la masa del sol $M$, entonces tenemos la siguiente ecuaci\'on:
+
+\begin{equation}
+\frac{r^3\omega^2}{G} = M.
+\end{equation}
+
+Ahora, para obtener $\omega$, debemos usar los datos espec\'ificos de cada planeta teniendo en cuenta que:
+
+\begin{equation}
+\omega_\theta = cos(\phi)\dot{\theta},
+\omega_\phi = \dot{\phi},
+\end{equation}
+
+donde $\theta$ es la latitud y  $\phi$ es la longitud.
+
+\begin{questions}
+
+\question[20] {\bf{Cargar los datos}}
+
+Cargue los datos de cada planeta y obtenga, para cada uno, radio, latitud y longitud. Tengan cuidado con la distici\'on entre grados y radianes.
+
+\question[50] {\bf{Derivaci\'on num\'erica}}
+
+Cree una funci\'on que, dadas la latitud y longitud, calcule la velocidad angular usando la aproximaci\'on de derivada central. No se olvide que el intervalo de los datos es de un d\'ia.\\
+
+Grafique, para cada planeta, la velocidad angular en funci\'on del tiempo.\\
+
+\question[20] {\bf{La masa del sol}}
+
+Omitiendo los valores correspondientes a saltos de \'angulo de 360 a 0 grados, calcule el promedio de la velocidad angular. Luego, usando ese promedio, y el semi-eje mayor, para cada planeta calcule la masa del sol y calcule el error obtenido en cada caso.
+
+\question[10]{\bf{Comentarios}}
+
+Comenten su c\'odigo.
+
+\question[10]{Bono}
+
+Comenten qu\'e errores v\'alidos pueden influir en los c\'alculos.
+
+\end{questions}
+\end{document}

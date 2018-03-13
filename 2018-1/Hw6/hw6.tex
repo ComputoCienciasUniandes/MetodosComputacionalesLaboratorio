@@ -1,0 +1,173 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath,amssymb}
+\usepackage{bigints}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large Laboratorio de M\'etodos Computacionales} \\
+Tarea 6 - \textsc{Sistemas lineales y PCA}\\
+01-2018\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(164mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\vspace{0.3cm}
+
+\noindent
+La soluci\'on a este taller debe subirse por SICUA antes de terminada la clase.
+%\noindent
+%Si la soluci\'on est\'a en SICUA
+%antes de las 8:30AM del domingo 31 de Enero del 2016 se calificar\'a
+%el taller sobre 125 puntos. 
+\noindent
+Los archivos c\'odigo fuente deben subirse en un \'unico archivo
+\verb".zip" con el nombre \verb"NombreApellido_hw6.zip", por ejemplo
+yo deber\'ia subir el zip \verb"JesusPrada_hw6.zip" (10 puntos). Recuerden que es un trabajo individual y debe ser realizado en un script de python (.py).
+
+\vspace{0.3cm}
+
+\begin{questions}
+
+\question[15] {\bf{Comentarios}}
+
+Por favor comenten todo su c\'odigo. Espec\'ificamente, a cada variable importante o no evidente deben comentar su significado. A cada funci\'on deben comentar su prop\'osito principal y el significado de sus par\'ametros. A cada iteraci\'on deben comentar su objetivo. Se acepta declarar variables con nombre evidente como \verb"matrix" en lugar de comentar su significado.\\
+
+
+
+\LARGE \textbf{Aclaraciones sobre python: Punteros}\\
+\normalsize
+
+\question[5] {\bf{Variables simples}}
+
+Cuando definimos una variable sencilla de tipo \verb"int", \verb"float", etc., su manejo es tambi\'en trivial.\\
+
+Defina una variable llamada \verb"var1" de tipo entero que contenga el n\'umero \verb"1000". Ahora defina una variable \verb"var2" que tome el valor de la variable \verb"var1".\\
+
+Al asignarle a \verb"var2" el valor de la variable \verb"var1" hemos creado efectivamente una \textbf{COPIA INDEPENDIENTE} de la variable \verb"var1" en \verb"var2". Esto significa que si modificamos el valor de la variable \verb"var1", el valor de la variable \verb"var2" no deber\'ia verse afectado.\\
+
+A continuaci\'on modifique el valor de la variable \verb"var2" a \verb"2000" e imprima un mensaje que deje claro cu\'al es el valor de cada variable. CORRA EL PROGRAMA. Se esperaba ese resultado?\\
+
+Deje expresadas sus conclusiones en un mensaje que debe imprimir.\\
+
+En una analog\'ia con un caso de la vida real. Supongamos que se le ha da\~nado el celular. Entonces, la manera m\'as sencilla y pr\'actica de \textbf{MODIFICARLO} es llevando el celular mismo directamente al t\'ecnico. En este caso, la manera m\'as sencilla de \textbf{MODIFICAR} una variable es trabajar directamente con su \textbf{valor}. As\'i, el objeto en s\'i es equivalente al valor de la variable. Tal vez suene un poco extra\~na, pero esta analog\'ia demostrar\'a ser \'util luego.\\  
+
+\question[5] {\bf{Punteros}}
+
+Uno de los paradigmas m\'as importantes para explotar a fondo las capacidades de la programaci\'on es la cuesti\'on de los punteros. Los punteros est\'an principalmente asociados a tipos de variables no elementales, especialmente contenedoras modificables como las listas.\\
+
+Cuando definimos una variable de tipo \verb"list", en realidad la variable \textbf{NO} est\'a asociada directamente al valor de la lista que hemos definido. En su lugar, la variable es un \textbf{PUNTERO}. Un \textbf{PUNTERO} es un elemento que \textbf{APUNTA} a la \textbf{DIRECCI\'ON} en memoria donde se encuentra el contenido de la variable que estamos representando.\\
+
+Esta situaci\'on es mucho m\'as simple de lo que parece. Invocando otra vez el caso de la vida real, las variables m\'as complicadas corresponder\'ian a elementos de la vida real m\'as dif\'iciles de tratar. Supongamos que en un apag\'on le ha ocurrido alg\'un imperfecto a la nevera. Ahora, la forma m\'as sencilla de \textbf{MODIFICARLA} NO es llevarla al t\'ecnico. En lugar de eso, esperamos que el t\'ecnico \textbf{MODIFIQUE} la nevera a domicilio. Pero para esto, el t\'ecnico necesita saber la \textbf{DIRECCI\'ON} de la casa.\\
+ 
+Las contenedoras como las listas o arreglos de Numpy son tipos de dato complejos y dado que su tama\~no es variable y pueden llegar a ser bastante grandes (como una nevera), la forma m\'as sencilla es trabajar con este tipo de datos es manejando la direcci\'on en memoria. En general, la variable que definimos para la lista o el arreglo \textbf{NO} est\'a asociada a su valor. En lugar de guardar el valor de los elementos del arreglo, la variable est\'a asociada a la direcci\'on en memoria del arreglo. Esto quiere decir que al copiar el valor de una lista en otra variable, estamos copiando en realidad la direcci\'on en memoria de los elementos, en lugar de los elementos en s\'i. Qu\'e significa esto y por qu\'e nos importa? Miremos:\\
+
+Defina una variable de tipo lista llamada \verb"lista1" con los elementos \verb"1,2,3". Defina una variable llamada \verb"lista2". Iguale \verb"lista1" a \verb"lista2", claramente asignando \verb"lista1" a \verb"lista2". Despu\'es modifique el primer valor de \verb"lista1" con el valor \verb"1000".\\
+
+Imprima un mensaje que deje claro cu\'ales son los elementos de \verb"lista1" y de \verb"lista2". CORRA EL PROGRAMA.\\
+
+Nota la diferencia? Al modificar \verb"lista1" se modifica el valor de \verb"lista2"? Por qu\'e? Deje expresadas sus conclusiones en un mensaje que debe imprimir.
+
+\question[5] {\bf{C\'omo hacer copias de variables asociadas a punteros}}
+
+Hemos confirmado que la l\'inea de c\'odigo \verb"puntero2 = puntero1" NO crea una copia del objeto asociado a cada variable. En lugar de esto, se copian las direcciones en memoria. Entonces, no tenemos dos copias de los objetos, sino dos copias de la direcci\'on a un mismo objeto. Esto puede ser problem\'atico especialmente cuando uno quiere hacer operaciones sobre una lista o un arreglo, sin cambiar el arreglo original, como vieron en el caso de la eliminaci\'on gaussiana en donde la matriz de entrada es modificada iterativamente.\\
+
+Para hacer copias reales, o clones de los objetos asociados a un puntero, es necesario tomar otro camino. En el caso de las listas, la acci\'on de \textit{slicing} en realidad crea copias reales de las sub-listas. Esto quiere decir que para copiar una lista simplemente podemos escribir:\\
+
+\begin{verbatim}
+lista2 = lista1[:]
+\end{verbatim}
+
+Otra manera de hacer una copia verdadera es exigir la creaci\'on de un objeto nuevo a partir de los elementos de otro objeto. En este caso, el objeto es de tipo \verb"list" y, dado un elemento iterable \verb"iter", al llamar el constructor de la clase \verb"list" sobre el iterable, lo que pasar\'a es que se crear\'a una copia elemento a elemento que ser\'an organizados en una lista. En este caso podemos clonar una lista de la siguiente manera:
+
+\begin{verbatim}
+lista2 = list(lista1)
+\end{verbatim}
+ 
+Defina una variable de tipo lista llamada \verb"lista1" con los elementos \verb"1,2,3". Defina una variable llamada \verb"lista2". Haga una copia de \verb"lista1" y gu\'ardela en la variable \verb"lista2". Despu\'es modifique el primer valor de \verb"lista1" con el valor \verb"1000".\\
+
+Imprima un mensaje que deje claro cu\'ales son los elementos de \verb"lista1" y de \verb"lista2". CORRA EL PROGRAMA.\\
+
+Nota la diferencia? Se solucion\'o el problema? Deje expresadas sus conclusiones en un mensaje que debe imprimir.\\
+
+\LARGE \textbf{Ahora, la tarea de verdad!}\\
+
+\normalsize
+
+\textbf{Trabajando con \'orbitas de planetas OTRA VEZ!}
+
+
+\question[5] {\bf{Cargar los datos}}
+
+Cree una funci\'on llamada \verb"cargar(filename)" que tome como par\'ametro un string llamado \verb"filename" y retorne el arreglo de numpy producido con \verb"np.loadtxt()".
+
+\question[30] {\bf{Matriz de covarianza}}
+
+Cree una funci\'on llamada \verb"covarianza(matriz)" que tome como par\'ametro un arreglo de numpy llamado \verb"matriz" consistente de \verb"N" valores (filas) de \verb"M" dimensiones (columnas) y retorne la matriz de covarianza asociada a este cojunto de valores. La matriz de covarianza debe ser \verb"MxM". No se le olvide tener cuidado de no modificar el par\'ametro \verb"matriz".\\
+
+\question[25] {\bf{PCA}}
+
+Cree una funci\'on llamada \verb"PCA(cov)" que tome como par\'ametro un arreglo de numpy llamado \verb"cov". Este par\'ametro ser\'a una matriz de covarianza de tama\~no \verb"MxM". La funci\'on debe diagonalizar la matriz de covarianza y devolver el autovector correspondiente al m\'inimo autovalor.\\
+
+\question[10]{\bf{Aplicaci\'on a \'orbitas de planetas}}
+
+Dadas las posiciones \verb"X,Y,Z" de un planeta a intervalos de un d\'ia en el archivo \verb"planeta.txt", al sacar la matriz de covarianza, esto nos dar\'a una idea de la dispersi\'on de los datos en cada variable y de la correlaci\'on entre variables. Los planetas describen \'orbitas el\'ipticas, lo cual es consecuencia de la fuerza radial entre el planeta y el sol. Las elipses viven en planos, lo cual quiere decir que bajo alguna transformaci\'on de coordenadas (rotaci\'on), habr\'a una variable, ll\'amese \verb"Z'" que permanecer\'a constante y en cero. Esto quiere decir que la dispersi\'on asociada a \verb"Z'" ser\'a 0. Al diagonalizar la matriz de covarianza, estamos efectivamente aplicando una rotaci\'on sobre la cual la matriz queda en forma diagonal. Los autovectores dictar\'an las direcciones principales de covarianza.\\
+
+Todo esto quiere decir, que si diagonalizamos la matriz de covarianza asociada a las coordenadas de un planeta, encontraremos que la direcci\'on del m\'inimo autovalor ser\'a la direcci\'on perpendicular a la elipse, es decir, la direcci\'on con varianza aproximadamente nula.\\
+
+Al realizar PCA sobre las \'orbitas de los planetas podemos encontrar la direcci\'on del plano el\'iptico donde se desarrolla el movimiento planetario.\\
+
+Para los planetas Mercurio, y Venus, utilice las funciones anteriormente definidas para obtener el vector asociado al plano el\'iptico de cada planeta.\\
+
+Para esto:\\
+
+\begin{itemize}
+\item Cargue los datos
+\item Obtenga la matriz de covarianza
+\item Aplique PCA sobre la matriz de covarianza
+\end{itemize}
+
+Deje expl\'icito por medio de mensajes cu\'al es el vector del plano el\'iptico de cada planeta.\\
+
+\question[10]{\bf{Gr\'aficas}}
+
+Haga una gr\'afica de las coordenadas de los planetas (una por cada una) y grafique sobre la misma figura el vector del plano el\'iptico.\\
+
+Para graficar en 3 dimensiones:
+
+\begin{verbatim}
+from mpl_toolkits.mplot3d import Axes3D
+fig = plt.figure()
+xx,yy,zz = el vector del plano
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(x,y,z, c='r', marker='.')
+ax.plot([0,xx],[0,yy],[0,zz])
+\end{verbatim}
+
+Guarde cada figura en un archivo llamado \verb"planet.png"
+
+\end{questions}
+
+\end{document}

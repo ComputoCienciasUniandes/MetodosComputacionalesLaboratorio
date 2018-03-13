@@ -1,0 +1,156 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath,amssymb}
+\usepackage{bigints}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large Laboratorio de M\'etodos Computacionales} \\
+Tarea 5 - \textsc{Sistemas de ecuaciones lineales}\\
+01-2018\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(164mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\vspace{0.3cm}
+
+\noindent
+La soluci\'on a este taller debe subirse por SICUA antes de terminada la clase.
+%\noindent
+%Si la soluci\'on est\'a en SICUA
+%antes de las 8:30AM del domingo 31 de Enero del 2016 se calificar\'a
+%el taller sobre 125 puntos. 
+\noindent
+Los archivos c\'odigo fuente deben subirse en un \'unico archivo
+\verb".zip" con el nombre \verb"NombreApellido_hw5.zip", por ejemplo
+yo deber\'ia subir el zip \verb"JesusPrada_hw5.zip" (10 puntos). Recuerden que es un trabajo individual y debe ser realizado en un script de python (.py).
+
+\vspace{0.3cm}
+
+\LARGE \textbf{Aclaraciones sobre python: El alcance(scope) de las variables}\\
+
+\normalsize
+
+En python y en general en la mayor\'ia de lenguajes de programaci\'on hay dos tipos de variables importantes: las variables \textbf{LOCALES} y las variables \textbf{GLOBALES}.\\
+
+Las variables \textbf{globales} son declaradas por fuera de funciones. \textbf{Una buena manera de saber si una variable es global es si no est\'a indentada}. Estas variables son accesibles por todos las funciones, ciclos, etc.\\
+
+Las variables \textbf{locales} son declaradas adentro de una funci\'on, o como par\'ametro. Estas variables son accesibles \'unicamente adentro de la funci\'on en la que fueron declaradas.\\
+
+Ahora, en python la sintaxis intuitiva y poco exigente, en donde \textbf{la asignaci\'on de variables autom\'aticamente las declara}, se presta para confusiones con las variables locales y globales. Es decir, en python es posible definir una variable global y luego definir una variable local con el mismo nombre. En este caso, la variable queda local o global? Demostr\'emoslo!\\
+
+\begin{questions}
+
+\question[15] {\bf{Comentarios}}
+
+Por favor comenten todo su c\'odigo. Espec\'ificamente, a cada variable importante o no evidente deben comentar su significado. A cada funci\'on deben comentar su prop\'osito principal y el significado de sus par\'ametros. A cada iteraci\'on deben comentar su objetivo. Se acepta declarar variables con nombre evidente como \verb"matrix" en lugar de comentar su significado.
+
+\question[5] {\bf{Declarar variables globales}}
+
+Declare una variable global llamada \verb"var1" y otra llamada \verb"var2". Estas variables deben tener el contenido \verb"'variable 1 global'" y \verb"'variable 2 global'" .
+
+\question[5] {\bf{Declarar una variable local (1)}}
+
+Como vimos anteriormente, hay dos maneras de declarar una variable local. Una es asign\'andole un valor dentro de la funci\'on. \\
+
+Defina una funci\'on llamada \verb"fun1()". Adentro de la funci\'on declaren una variable local llamada \verb"var1" con el contenido \verb"'variable 1 local'". Inmediatamente despu\'es esta funci\'on debe imprimir la variable \verb"var1".\\
+
+Cabe aclarar que definir una funci\'on \textbf{NO} la ejecuta. El contenido de una funci\'on es ejecutado \'unicamente al \textbf{LLAMAR} la funci\'on, no al \textbf{DEFINIRLA}.
+
+\question[5] {\bf{Declarar una variable local (2)}}
+
+Otra manera de declarar una variable local es declar\'andola como par\'ametro de una funci\'on. \\
+
+Defina una funci\'on llamada \verb"fun2(var2)" que tome como par\'ametro \verb"var2" y la imprima.
+
+
+\question[5]{\bf{Globales o locales?}}
+
+Imprima \verb"'Ejecutando fun1()'", luego ejecute la funci\'on \verb"fun1()". Imprima \verb"'Imprimiendo var1'", luego imprima la variable \verb"var1". \\
+
+Imprima \verb"'Ejecutando fun2()'", luego ejecute la funci\'on \verb"fun2('variable 2 local')". Imprima \verb"'Imprimiendo var2'", luego imprima la variable \verb"var2". \\
+
+Hemos declarado una variable global y luego hemos declarado una variable local con el mismo nombre. Comente (con un print) si la variable es local, global o ambas.
+
+\question[5]{\bf{Se puede asignar un valor a una variable global dentro de una funci\'on?}}
+
+Como vimos anteriormente, al asignarle el valor a una variable adentro de una funci\'on, se est\'a declarando como local. Esto significa que esa asignaci\'on s\'olo es v\'alida dentro de la funci\'on. Esta confusi\'on se puede arreglar trabajando con nombres diferentes de variables. Es decir, si se declara una variable (global) por fuera de una funci\'on, es mejor NO declarar una variable (local) con el mismo nombre adentro de la funci\'on.\\
+
+Sin embargo, a veces es necesario asignar o cambiar el valor de una variable global, adentro de una funci\'on. Recordando que asignar el valor de una variable adentro de una funci\'on la declara como local, esto es un problema que no se puede solucionar cambiando el nombre de las variables. En caso de que se quiera modificar una variable global \textbf{adentro} de una funci\'on, es necesario, antes de declararla local, recordarle a python que se modificar\'a la variable global. Para esto, se usa la siguiente l\'inea de c\'odigo:
+
+\begin{verbatim}
+global var
+\end{verbatim}
+
+Declare una funci\'on llamada \verb"fun3()". Adentro de la funci\'on modifique la variable global llamada \verb"var1" con el contenido \verb"'variable 1 global modificada'". Inmediatamente despu\'es esta funci\'on debe imprimir la variable \verb"var1".\\  
+
+Imprima \verb"'Ejecutando fun3()'", luego ejecute la funci\'on \verb"fun3()". Imprima \verb"'Imprimiendo var1'", luego imprima la variable \verb"var1". Noten la diferencia con el punto anterior.\\
+
+Cabe aclarar que establecer una variable \verb"var" como pra\'ametro de una funci\'on autom\'aticamente la hace local. Dado que \verb"global var" tiene que ser ejecutado antes de que la variable sea declarada local, modificar una variable global llamada \verb"var" dentro de una funci\'on que tiene como par\'ametro la variable \verb"var", es imposible.\\
+\end{questions}
+
+\LARGE \textbf{Ahora, la tarea de verdad!}\\
+
+\normalsize
+
+\textbf{El filtro sepia}
+
+El filtro sepia obtiene nuevas componentes RGB de una imagen como combinaci\'on lineal de las anteriores componentes. Los valores recomendados para esta combinaci\'on est\'an dados por una operaci\'on matricial:
+
+\begin{gather}
+ \begin{bmatrix} sR \\ sG \\ sB \end{bmatrix}
+ =
+  \begin{bmatrix}
+   .393 & .769 & .189\\
+   .349 & .686 & .168\\
+   .272 & .534 & .131\\
+   \end{bmatrix}
+   \begin{bmatrix} R \\ G \\ B \end{bmatrix}
+\end{gather}
+
+Esto quiere decir que si tenemos una foto en sepia, es posible obtener la foto original resolviendo el sistema lineal de ecuaciones.
+
+\begin{questions}
+\question[30] {\bf{Funcion de solucion de sistemas lineales}}
+
+Cree una funci\'on que dada una matriz \verb"M" y un vector \verb"b", resuelva el sistema lineal \verb"Mb = v" por eliminaci\'on gaussiana. Creen su propio c\'odigo y comenten absolutamente todo. Esta funcion debe \textbf{RETORNAR} el valor del vector \verb"x" soluci\'on.
+
+\question[20] {\bf{Cargar la imagen sepia}}
+
+Cargue la imagen \verb"sepia.npy" a un arreglo de numpy usando \verb"np.load()". Obtendr\'a una matriz donde cada elemento es un pixel consistente de un vector \verb"[SR SG SB]". Grafique esa imagen con \verb"plt.imshow()" y gu\'ardela en la imagen \verb"sepia.png" \\\
+
+\question[20] {\bf{Obtener la imagen original}}
+
+Para cada pixel \verb"[SR SG SB]" obtenga el correspondiente \verb"[R G B]" resolviendo el sistema lineal \verb"llamando" la funci\'on anteriormente definida. La imagen original donde se guardan los valores \verb"[R G B]" debe estar codificada en una matriz llamada \verb"original".\\
+
+Sin embargo, esta combinaci\'on puede arrojar valores mayores a 1, por lo cual es necesario renormalizar la imagen por el m\'aximo valor general. En otras palabras, cuando acoplen los nuevos valores de RGB en la imagen \verb'original', deben realizar la siguiente operaci\'on:\\
+
+\verb'original = (original/original.max())'\\
+
+Con \verb"imshow()" verifiquen que recuperaron el color. Guarde la imagen como \verb"original.png"\\
+
+\end{questions}
+
+\end{document}
