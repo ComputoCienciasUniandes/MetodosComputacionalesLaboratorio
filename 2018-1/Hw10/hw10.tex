@@ -1,0 +1,98 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath,amssymb}
+\usepackage{bigints}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large Laboratorio de M\'etodos Computacionales} \\
+Tarea 10 - \textsc{C++: Arreglos, Funciones, Input/Output}\\
+01-2018\\
+\end{center}
+
+\begin{textblock*}{40mm}(10mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\begin{textblock*}{40mm}(164mm,20mm)
+  \includegraphics[width=3cm]{logoUniandes}
+\end{textblock*}
+
+\vspace{0.3cm}
+
+\noindent
+La soluci\'on a este taller debe subirse por SICUA antes de terminada la clase.
+%\noindent
+%Si la soluci\'on est\'a en SICUA
+%antes de las 8:30AM del domingo 31 de Enero del 2016 se calificar\'a
+%el taller sobre 125 puntos. 
+\noindent
+Los archivos c\'odigo fuente deben subirse en un \'unico repositorio en Github llamado
+\verb"NombreApellido_hw10", por ejemplo yo deber\'ia subir mis archivos a un repositorio llamado \verb"JesusPrada_hw10" (10 puntos). En la actividad de sicua deben enviar el link de la tarea en su repositorio.\\ 
+
+\textbf{Recuerden que es un trabajo individual y debe ser realizado en scripts de python (.py) y C++ (.cpp).}\\
+
+\textbf{ NO SE ACEPTAN TRABAJOS TARDE ENVIADOS AL CORREO.}\\
+
+
+Para trabajar en los siguientes temas del curso, es necesario saber manejar arreglos de C++ a la perfecci\'on. Por esta raz\'on, este taller ser\'a un taller de pr\'actica para prepararse para los siguientes temas.\\
+
+\vspace{0.3cm}
+
+\begin{questions}
+
+\question[0] {\bf{COMENTARIOS Y OUTPUTS}}
+
+
+\textbf{El programa ser\'a interactivo a traves del manejo de inputs y outputs con el usuario. Todo debe quedar claro para un usuario que no program\'o el script de C++, no s\'olo por medio de la documentaci\'on o los comentarios.}
+
+\textbf{SI EL C\'ODIGO NO EST\'A COMENTADO (INCLUYENDO MENSAJES EN CONSOLA) Y NO CORRE O ARROJA RESULTADOS ERR\'ONEOS, NO SE REVISAR\'A}
+
+
+
+\question[40] {\bf{Multiplicaci\'on matricial}}
+
+En un programa de C++ llamado (NA = SUS iniciales de NombreApellido) \verb"NA_linAlg.cpp", cree una funci\'on llamada \verb"matrix_product" que tome como par\'ametro dos matrices no necesariamente cuadradas y retorne el producto matricial. \textbf{PROHIBIDO USAR C\'ODIGO DE OTRAS FUENTES}.\\
+
+\textbf{Ayuda:} Probablemente les sea \'util:
+
+\begin{itemize}
+\item Incluir las dimensiones de cada matriz como par\'ametro.
+\item Declarar una matriz con las dimensiones esperadas del producto matricial.   
+\end{itemize}
+
+\question[30]{\bf{Crear una matriz a partir de un input}}
+
+Cree una funci\'on llamada \verb"get_Matrix" que, dadas las dimensiones \verb"M,N", cree una matriz \verb"MxN", la llene con los valores que entran como input en consola y la retorne. Primero el programa deber\'a imprimir las dimensiones. Luego, el programa deber\'a pedir, uno por uno, los elementos de la matriz a trav\'es de la consola. El programa debe imprimir qu\'e elemento se ingresar\'a antes de ped\'irselo al usuario. Una vez llena la matriz, el programa deber\'a imprimirla en pantalla con un mensaje que deje claro que esa es la matriz que se ha ingresado (diferenciar de los anteriores mensajes).\\
+
+
+\question[30]{\bf{Multiplicar matrices}}
+
+En la funci\'on \verb"main" del programa de C++:
+
+\begin{itemize}
+\item (5) Pida las dimensiones de cada matriz al usuario, no sin antes indicarlo en un mensaje en el que quede claro de cu\'al de las dos matrices se trata. Recuerde que para que la multiplicaci\'on de dos matrices $A\times B$, la segunda dimensi\'on de $A$ debe ser igual a la primera dimensi\'on de $B$. Verifique que esto se cumple y en caso de que no se cumpla, imprima un mensaje con el error y termine el programa.
+\item (10) Dadas las dimensiones, obtenga cada matriz al llamar la funci\'on \verb"get_Matrix", indicando en un mensaje cu\'al matriz se est\'a ingresando.
+\item (10) Realice la multiplicaci\'on de ambas matrices llamando la funci\'on \verb"matrix_product"
+\item (5) Imprima el resultado del producto matricial con un mensaje que deje claro que se trata del resultado.  
+\end{itemize}
+
+\end{questions}
+
+\end{document}
